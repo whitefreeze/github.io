@@ -1,5 +1,5 @@
 function myRandomQuestion() {
-  
+  // pass an array into the function as an argument. Then you can choose which set of data to be working with. 
     var questionList = [
       "What was a movie you saw recently? How was it? What actors were in it?",
       "Where were you yesterday at 7:00 a.m.? At 1:00 p.m.? At 8:00 p.m.?",
@@ -11,31 +11,34 @@ function myRandomQuestion() {
       "What should people do when they have a backache?",
       "What should you do when you have the flu? A sore throat? A cold?"
     ]
-    
-   // Logger.log(questionList[1])
   
-   var questionNumber = questionList.length;
-   
-   // Logger.log(questionNumber);
+    var questionNumber = questionList.length;
     
     var randomNum = Math.floor(Math.random() * Math.floor(questionNumber));
     
-   // Logger.log(randomNum);
-    
-  //  Logger.log(questionList[randomNum]);
-  var theCalculatedAnswer = questionList[randomNum];
+    var theCalculatedAnswer = questionList[randomNum];
 
-  var answer = document.querySelector('#answer');
-  answer.innerHTML = theCalculatedAnswer;
+    var answer = document.querySelector('#answer');
+    answer.innerHTML = theCalculatedAnswer;
 
     console.log(questionList[randomNum]);
     return (questionList[randomNum]);
 }
 
-
 var question1 = document.querySelector("#answer");
 question1.innerHTML = myRandomQuestion();
   
+// use + and - buttons to change the text size, up to a limit (1-4)
+// pass in class of text (.display-1), interate number in class, return new class.
+
+function textPlus() {
+
+}
+
+function textMinus() {
+
+}
+
 /*
   var time = document.getElementById("answer");
   console.log("question1 " + question1);
