@@ -38,8 +38,40 @@ var S1units712 = [
     "What do you like to do on vacation?",
     "What are you going to do this summer?"
     ];
-var S2units16 = ["S2 units 1-6"]
-var S2units712 = ["S2 units 7-12"]
+var S2units16 = [
+    "What are your hobbies?",
+    "What are your friends’ hobbies?",
+    "Do you like to play video games? If you do, what are your favorite games?  What are you wearing today?",
+    "Think of a friend. What does he or she usually wear?",
+    "Think of two stores you usually go to. Which do you like better? Why?",
+    "What sports do you enjoy?",
+    "What sports do you not like?",
+    "What sports do people in your family like?",
+    "What kinds of public transportation do you usually use?",
+    "Can you tell me where I can get some cash near here?",
+    "Do you know what time it is?",
+    "What is your personality like? How would you describe yourself?  Think of a friend. What is his or her personality like?",
+    "What are you doing right now?",
+    "What is a dish that is delicious and easy to make?  How do you make it?",
+    "Do you drink coffee or tea? Do you usually have it at home or buy it outside?"
+]
+var S2units712 = [
+    "How’s the weather today?",
+    "What is the weather going to be like tomorrow?",
+    "What is the hottest place in this country? The coldest?",
+    "What time do you usually get dressed on weekdays? On weekends?  What were you doing at 8:00 p.m. last night?",
+    "Where were you living in 2008?",
+    "Which school subjects are you most interested in?",
+    "Which school subjects do you think are boring?",
+    "What was the best class you ever took? Why?",
+    "Have you ever been late for class this year? If so, how many times?  How do you study for test?",
+    "How do you prepare and get ready for tests? What do you do when you get nervous while taking tests?",
+    "Do you ever help people with homework? If so, who did you help? What kind of homework was it?",
+    "What was a favor you asked someone to do recently? What was a favor someone else asked you to do?  Would you mind spelling your name for me?",
+    "What do you usually do before you travel?",
+    "What do you have to do this week?",
+    "What did you have to do last weekend?"
+]
 var units16 = S1units16;
 var units712 = S1units712; 
 var unitRange =  units16.concat(units712);
