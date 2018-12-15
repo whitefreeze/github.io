@@ -1,9 +1,62 @@
+var S1units16 = [
+    "Where do you live?",
+    "What are some interesting jobs?",
+    "What do some of your friends do?",
+    "Where are you from? Do you have friends in a different city?",
+    "Do you play sports? What sports do you play?",
+    "Do you have a healthy lifestyle? Why or why not?",
+    "What are you doing these days?",
+    "What are people in your family doing these days?",
+    "Why are you learning English?",
+    "How do you feel now? Why?",
+    "What makes you happy?",
+    "Who are some of your good friends? Why do you like them?",
+    "How was your day yesterday?",
+    "What do you usually do on weekends? What did you do last weekend?",
+    "Where is this school?",
+    "Is there a bus stop near here?",
+    "Where is your doctor’s office?"
+]
+var S1units712 = [
+    "What was a movie you saw recently? How was it? What actors were in it?",
+    "Where were you yesterday at 7:00 a.m.? At 1:00 p.m.? At 8:00 p.m.?",
+    "Were you late for anything last week? Why?",
+    "What fruit did you eat yesterday? Vegetables? Meats? What did you drink?",
+    "Think of a dish you know how to make. How do you make it?",
+    "What is usually in your refrigerator? What is in your refrigerator right now?",
+    "What do you do when you have a headache? A stomachache? A fever?",
+    "What should people do when they have a backache?",
+    "What should you do when you have the flu? A sore throat? A cold?",
+    "What is your favorite city? What is it like?",
+    "How was your last vacation?",
+    "How was the weather here last week?",
+    "What kinds of music do you like?",
+    "What kinds of music do your friends like? Your family?",
+    "Who is your favorite musician or band? Why do you like them?",
+    "What kind of music do they play?",
+    "What are you going to do this weekend? What plans do you have?",
+    "What do you like to do on vacation?",
+    "What are you going to do this summer?"
+    ];
+var S2units16 = ["S2 units 1-6"]
+var S2units712 = ["S2 units 7-12"]
+var units16 = S1units16;
+var units712 = S1units712; 
+var unitRange =  units16.concat(units712);
+
+// initial page loaded with a question
+myRandomQuestion(unitRange);
+
+Stretch1();
+
 function myRandomQuestion(questionList) {
   // pass an array into the function as an argument. Then you can choose which set of data to be working with. 
   
   var questionNumber = questionList.length;
+  console.log(questionList.length);
   
-  var randomNum = Math.floor(Math.random() * Math.floor(questionNumber));
+  var randomNum = Math.floor(Math.random() * questionNumber);
+  console.log(randomNum);
   
   var theCalculatedAnswer = questionList[randomNum];
   
@@ -21,51 +74,6 @@ function myRandomQuestion(questionList) {
     use these units;
 } else { use these other units};
 */
-    var S1units16 = [
-        "Where do you live?",
-        "What are some interesting jobs?",
-        "What do some of your friends do?",
-        "Where are you from? Do you have friends in a different city?",
-        "Do you play sports? What sports do you play?",
-        "Do you have a healthy lifestyle? Why or why not?",
-        "What are you doing these days?",
-        "What are people in your family doing these days?",
-        "Why are you learning English?",
-        "How do you feel now? Why?",
-        "What makes you happy?",
-        "Who are some of your good friends? Why do you like them?",
-        "How was your day yesterday?",
-        "What do you usually do on weekends? What did you do last weekend?",
-        "Where is this school?",
-        "Is there a bus stop near here?",
-        "Where is your doctor’s office?"
-    ]
-    var S1units712 = [
-        "What was a movie you saw recently? How was it? What actors were in it?",
-        "Where were you yesterday at 7:00 a.m.? At 1:00 p.m.? At 8:00 p.m.?",
-        "Were you late for anything last week? Why?",
-        "What fruit did you eat yesterday? Vegetables? Meats? What did you drink?",
-        "Think of a dish you know how to make. How do you make it?",
-        "What is usually in your refrigerator? What is in your refrigerator right now?",
-        "What do you do when you have a headache? A stomachache? A fever?",
-        "What should people do when they have a backache?",
-        "What should you do when you have the flu? A sore throat? A cold?",
-        "What is your favorite city? What is it like?",
-        "How was your last vacation?",
-        "How was the weather here last week?",
-        "What kinds of music do you like?",
-        "What kinds of music do your friends like? Your family?",
-        "Who is your favorite musician or band? Why do you like them?",
-        "What kind of music do they play?",
-        "What are you going to do this weekend? What plans do you have?",
-        "What do you like to do on vacation?",
-        "What are you going to do this summer?"
-        ];
-    var S2units16 = ["S2 units 1-6"]
-    var S2units712 = ["S2 units 7-12"]
-    var units16 = []
-    var units712 = []
-    var unitRange =  [];
     
     // set function that replaces all variables with Stretch 1 or 2 values, respectively
     function Stretch1() {
@@ -74,6 +82,8 @@ function myRandomQuestion(questionList) {
         
         units16 = S1units16;
         units712 = S1units712;     
+        
+        unitRange = units16.concat(units712);
     }   
     
     function Stretch2() {
@@ -83,10 +93,10 @@ function myRandomQuestion(questionList) {
         units16 = S2units16;
         units712 = S2units712;     
         
+        unitRange = units16.concat(units712);
     }
     
-unitRange = [units16.concat(units712)];
-Stretch1();
+    
 
 
 // toggle attribute of "checked" on the unit buttons
@@ -101,12 +111,10 @@ function unitsEntire() {
     myRandomQuestion(unitRange);
 };
 
-myRandomQuestion(unitRange);
-
 var article = document.getElementById('answer');
 
-var question1 = document.querySelector("#answer");
-question1.innerHTML = myRandomQuestion();
+// var question1 = document.querySelector("#answer");
+// question1.innerHTML = myRandomQuestion();
 
 
 // use + and - buttons to change the text size, up to a limit (1-4)
