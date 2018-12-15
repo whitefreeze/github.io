@@ -10,8 +10,8 @@
 </head>
 <body>
     <div class="container-fluid">
-        <button type="button" class="btn btn-success" disabled>Stretch 1</button>
-        <button type="button" class="btn btn-primary" >Stretch 2</button>
+        <button type="button" class="btn btn-success" id="stretch1" disabled>Stretch 1</button>
+        <button type="button" class="btn btn-primary" id="stretch2">Stretch 2</button>
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-secondary active">
                 <input type="radio" name="options" id="option1" autocomplete="off" checked> Interview Qs
@@ -20,12 +20,20 @@
                 <input type="radio" name="options" id="option2" autocomplete="off"> Roleplays
             </label>            
         </div>    
-        <button type="button" id="button" class="btn btn-danger" onclick="myRandomQuestion();">New Question</button>
-        <button type="button" class="btn btn-light" onclick="textPlus();">+</button>
-        <button type="button" class="btn btn-light" onclick="myRandomQuestion();">-</button>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active" onclick="unitsEntire()">
+                <input type="radio" name="options" id="unitAll" autocomplete="off" checked> All units
+            </label>
+            <label class="btn btn-secondary" onclick="unitsLast()">
+                <input type="radio" name="options" id="unit712" autocomplete="off"> Units 7-12
+            </label>            
+        </div>    
+        <button type="button" id="button" class="btn btn-danger" onclick="myRandomQuestion(unitRange)">New Question</button>
+        <button type="button" class="btn btn-light" onclick="plus()">+</button>
+        <button type="button" class="btn btn-light" onclick="minus()">-</button>
     </div>
    
-    <h1 id="answer" class="display-4">yoyo</h1>
+    <h1 id="answer" class="display-2">yoyo</h1>
    <!-- <div class="container-fluid"> 
         <button type="button" class="btn btn-outline-success">Interview Qs</button>
         <button type="button" class="btn btn-outline-success" disabled>Roleplays</button>
