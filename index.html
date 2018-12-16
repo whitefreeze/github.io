@@ -17,10 +17,10 @@
         </div>
         <div class="col-lg-6">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active">
+                <label class="btn btn-secondary active" onclick="roleplayHide()">
                     <input type="radio" name="options" id="option1" autocomplete="off" checked> Interview Qs
                 </label>
-                <label class="btn btn-secondary">
+                <label class="btn btn-secondary" onclick="roleplayShow()">
                     <input type="radio" name="options" id="option2" autocomplete="off"> Roleplays
                 </label>            
             </div>    
@@ -40,6 +40,7 @@
     </div>
    <div class="container">
        <h1 id="answer" class="display-2 col">yoyo</h1>
+       <h1 id="roleplay" class="display-2 col">yoyo</h1>
    </div>
    <!-- <div class="container-fluid"> 
         <button type="button" class="btn btn-outline-success">Interview Qs</button>

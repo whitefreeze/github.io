@@ -196,6 +196,18 @@ function downupBlue() {
     }  
 }
 
+// initial hiding of Roleplays when page is loaded
+// done in CSS
+
+// when Roleplays button is clicked, hide #answer and show #answer1
+function roleplayShow() {
+    document.querySelector("#roleplay").style.display = 'block';
+    document.querySelector("#answer").style.display = 'none';
+}
+function roleplayHide() {
+    document.querySelector("#roleplay").style.display = 'none';
+    document.querySelector("#answer").style.display = 'block';
+}
 
   
   

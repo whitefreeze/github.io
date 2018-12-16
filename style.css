@@ -1,0 +1,5 @@
+/* initial hiding of Roleplays when page is loaded */
+#roleplay {
+    display: none;
+}
+
