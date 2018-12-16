@@ -99,41 +99,28 @@ function myRandomQuestion(questionList) {
   console.log(unitRange);
   return (questionList[randomNum]);
 }
+    
+// set function that replaces all variables with Stretch 1 or 2 values, respectively
+function Stretch1() {
+    document.querySelector("#stretch1").setAttribute("disabled", "");
+    document.querySelector("#stretch2").removeAttribute("disabled");
+    
+    units16 = S1units16;
+    units712 = S1units712;     
+    
+    unitRange = units16.concat(units712);
+}   
+function Stretch2() {
+    document.querySelector("#stretch2").setAttribute("disabled", "");
+    document.querySelector("#stretch1").removeAttribute("disabled");
+    
+    units16 = S2units16;
+    units712 = S2units712;     
+    
+    unitRange = units16.concat(units712);
+}    
 
-// make a new arr to hold all questions to be passed to generator
-// make conditional to determine how to evaluate unit range
-/* if(button x is active) {
-    use these units;
-} else { use these other units};
-*/
-    
-    // set function that replaces all variables with Stretch 1 or 2 values, respectively
-    function Stretch1() {
-        document.querySelector("#stretch1").setAttribute("disabled", "");
-        document.querySelector("#stretch2").removeAttribute("disabled");
-        
-        units16 = S1units16;
-        units712 = S1units712;     
-        
-        unitRange = units16.concat(units712);
-    }   
-    
-    function Stretch2() {
-        document.querySelector("#stretch2").setAttribute("disabled", "");
-        document.querySelector("#stretch1").removeAttribute("disabled");
-        
-        units16 = S2units16;
-        units712 = S2units712;     
-        
-        unitRange = units16.concat(units712);
-    }
-    
-    
-
-
-// toggle attribute of "checked" on the unit buttons
-// access an #id when the button is clicked. set its attribute to "checked" 
-// remove value of "checked" from the other button. 
+// change the range of the units by updating the arr to certain units, or all.
 function unitsLast() {
     unitRange = units712;
     myRandomQuestion(unitRange);
@@ -143,15 +130,11 @@ function unitsEntire() {
     myRandomQuestion(unitRange);
 };
 
-var article = document.getElementById('answer');
-
-// var question1 = document.querySelector("#answer");
-// question1.innerHTML = myRandomQuestion();
-
-
 // use + and - buttons to change the text size, up to a limit (1-4)
 // pass in class of text (.display-1), interate number in class, return new class.
 
+// grab h1 element where questions in arr will be placed.
+var article = document.getElementById('answer');
 
 // iterates the size
 function plus() {
@@ -163,14 +146,9 @@ function plus() {
         var size;
         size = name[8];
         
-        console.log(size);
-        
         if(size > 1) {
             size--;
         }
-        
-        console.log(name);
-        console.log(size);
         
         return "display-" + size;
     }
@@ -181,18 +159,13 @@ function minus() {
 }
 // decreases the value of the class name value
 function textMinus(name) {
-    console.log(name);
-    
+
     var size;
     size = name[8];
-    
-    console.log(size);
     
     if(size < 4) {
         size++;
     }
-    
-    console.log(size);
     
     return "display-" + size;
 }
