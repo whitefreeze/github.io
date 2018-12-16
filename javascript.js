@@ -76,10 +76,44 @@ var units16 = S1units16;
 var units712 = S1units712; 
 var unitRange =  units16.concat(units712);
 
-// initial page loaded with a question
+var S1RPunits16 = [
+    ["Greet Student B. Introduce yourself. Ask about Student B’s job. Show interest in B’s response.", "Respond to student A. Answer A’s questions."]
+];
+var S1RPunits712 = [
+    ["Tell Student B about someone who taught you a lot. Begin with: \“I learned a lot from...\” Listen and answer Student B’s question.", "Ask Student A for examples."]
+];
+var S2RPunits16 = [
+    ["Text A", "Text B"]
+];
+var S2RPunits712 = [
+    ["Text A", "Text B"]
+];
+var RPunits16 = S1RPunits16;
+var RPunits712 = S1RPunits712;
+var RPunitRange = RPunits16.concat(RPunits712);
+
+// initial page loaded with an initial question & roleplay
 myRandomQuestion(unitRange);
+myRandomRoleplay(RPunitRange);
 
 Stretch1();
+
+function myRandomRoleplay(questionList) {
+    var questionNumber = questionList.length;
+    console.log(questionList.length);
+
+    var randomNum = Math.floor(Math.random() * questionNumber);
+    console.log(randomNum);
+
+    var arr = document.querySelector("#roleplay").children[1].children;
+
+    // now, loop over the arr, with each index having another array: A & B
+    for(var i = 0; i < questionList.length; i++) {
+        arr[i].innerHTML = questionList[randomNum][i];
+    }
+
+    return arr;
+}
 
 function myRandomQuestion(questionList) {
   // pass an array into the function as an argument. Then you can choose which set of data to be working with. 
@@ -102,17 +136,24 @@ function myRandomQuestion(questionList) {
     
 // set function that replaces all variables with Stretch 1 or 2 values, respectively
 function Stretch1() {
-//    document.querySelector("#stretch1").setAttribute("disabled", "");
-//    document.querySelector("#stretch2").removeAttribute("disabled");
+    //    document.querySelector("#stretch1").setAttribute("disabled", "");
+    //    document.querySelector("#stretch2").removeAttribute("disabled");
     document.querySelector("#stretch2").classList.replace("btn-primary", "btn-outline-primary")
     document.querySelector("#stretch1").classList.replace("btn-outline-success", "btn-success")
     
+    // make +/- buttons outlined in Stretch 1 color green
     downupGreen();
     
+    //  replace Interview Question array with all Stretch 1 content
     units16 = S1units16;
     units712 = S1units712;     
-    
     unitRange = units16.concat(units712);
+    
+    // replace Roleplay array with all Stretch 1 content
+    RPunits16 = S1RPunits16;
+    RPunits712 = S1RPunits712;     
+    RPunitRange = RPunits16.concat(RPunits712);
+    
 }   
 function Stretch2() {
     //    document.querySelector("#stretch2").setAttribute("disabled", "");
@@ -120,22 +161,38 @@ function Stretch2() {
     document.querySelector("#stretch1").classList.replace("btn-success", "btn-outline-success")
     document.querySelector("#stretch2").classList.replace("btn-outline-primary", "btn-primary")
     
+    // make +/- buttons outlined in Stretch 2 color blue
     downupBlue();
-
+    
+    //  replace Interview Question array with all Stretch 2 content
     units16 = S2units16;
     units712 = S2units712;     
-    
     unitRange = units16.concat(units712);
+    
+    // replace Roleplay array with all Stretch 2 content
+    RPunits16 = S2RPunits16;
+    RPunits712 = S2RPunits712;     
+    RPunitRange = RPunits16.concat(RPunits712);
 }    
 
 // change the range of the units by updating the arr to certain units, or all.
 function unitsLast() {
+    // adjust units covered for Interview Questions
     unitRange = units712;
     myRandomQuestion(unitRange);
+    
+    // adjust units covered for Roleplays
+    RPunitRange = RPunits712;
+    myRandomRoleplay(RPunitRange);
 };
 function unitsEntire() {
+    // adjust units covered for Interview Questions
     unitRange = units16.concat(units712);
     myRandomQuestion(unitRange);
+
+    // adjust units covered for Roleplays
+    RPunitRange = RPunits16.concat(RPunits712);
+    myRandomRoleplay(RPunitRange);
 };
 
 // use + and - buttons to change the text size, up to a limit (1-4)

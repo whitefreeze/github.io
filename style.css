@@ -1,5 +1,11 @@
 /* initial hiding of Roleplays when page is loaded */
+
+/*  commented out for roleplay testing
 #roleplay {
     display: none;
 }
+*/
 
+#answer {
+    display: none;
+}

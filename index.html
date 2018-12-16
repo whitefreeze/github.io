@@ -11,9 +11,9 @@
 <body>
     <div class="container">
         <div class="col-lg-6">
-            <button type="button" class="btn btn-success" id="stretch1" onclick="Stretch1(), myRandomQuestion(unitRange)">Stretch 1</button>
-            <button type="button" class="btn btn-primary" id="stretch2" onclick="Stretch2(), myRandomQuestion(unitRange)">Stretch 2</button>
-            <button type="button" id="button" class="btn btn-warning btn-lg" onclick="myRandomQuestion(unitRange)">New Question</button>
+            <button type="button" class="btn btn-success" id="stretch1" onclick="Stretch1(), myRandomQuestion(unitRange); myRandomRoleplay(RPunitRange)">Stretch 1</button>
+            <button type="button" class="btn btn-primary" id="stretch2" onclick="Stretch2(), myRandomQuestion(unitRange); myRandomRoleplay(RPunitRange)">Stretch 2</button>
+            <button type="button" id="button" class="btn btn-warning btn-lg" onclick="myRandomQuestion(unitRange); myRandomRoleplay(RPunitRange)">New Question</button>
         </div>
         <div class="col-lg-6">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -40,7 +40,16 @@
     </div>
    <div class="container">
        <h1 id="answer" class="display-2 col">yoyo</h1>
-       <h1 id="roleplay" class="display-2 col">yoyo</h1>
+       <div id="roleplay">
+           <div class="row">
+               <h1 class="display-4 col-6">A</h1>
+               <h1 class="display-4 col-6">B</h1>
+           </div>
+           <div class="row">
+               <div id="textA" class="display-4 col-6">text</div>
+               <div id="textB" class="display-4 col-6">text</div>
+           </div>
+       </div>
    </div>
    <!-- <div class="container-fluid"> 
         <button type="button" class="btn btn-outline-success">Interview Qs</button>
