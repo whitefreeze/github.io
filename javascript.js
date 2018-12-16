@@ -96,7 +96,7 @@ var S2RPunits16 = [
     ["Text A", "Text B"]
 ];
 var S2RPunits712 = [
-    ["Text A", "Text B"]
+    ["Text AA", "Text BB"]
 ];
 var RPunits16 = S1RPunits16;
 var RPunits712 = S1RPunits712;
