@@ -41,7 +41,7 @@ var S1units712 = [
 var S2units16 = [
     "What are your hobbies?",
     "What are your friends’ hobbies?",
-    "Do you like to play video games? If you do, what are your favorite games?  What are you wearing today?",
+    "Do you like to play video games? If you do, what are your favorite games? What are you wearing today?",
     "Think of a friend. What does he or she usually wear?",
     "Think of two stores you usually go to. Which do you like better? Why?",
     "What sports do you enjoy?",
@@ -50,24 +50,24 @@ var S2units16 = [
     "What kinds of public transportation do you usually use?",
     "Can you tell me where I can get some cash near here?",
     "Do you know what time it is?",
-    "What is your personality like? How would you describe yourself?  Think of a friend. What is his or her personality like?",
+    "What is your personality like? How would you describe yourself? Think of a friend. What is his or her personality like?",
     "What are you doing right now?",
-    "What is a dish that is delicious and easy to make?  How do you make it?",
+    "What is a dish that is delicious and easy to make? How do you make it?",
     "Do you drink coffee or tea? Do you usually have it at home or buy it outside?"
 ]
 var S2units712 = [
     "How’s the weather today?",
     "What is the weather going to be like tomorrow?",
     "What is the hottest place in this country? The coldest?",
-    "What time do you usually get dressed on weekdays? On weekends?  What were you doing at 8:00 p.m. last night?",
+    "What time do you usually get dressed on weekdays? On weekends? What were you doing at 8:00 p.m. last night?",
     "Where were you living in 2008?",
     "Which school subjects are you most interested in?",
     "Which school subjects do you think are boring?",
     "What was the best class you ever took? Why?",
-    "Have you ever been late for class this year? If so, how many times?  How do you study for test?",
+    "Have you ever been late for class this year? If so, how many times? How do you study for test?",
     "How do you prepare and get ready for tests? What do you do when you get nervous while taking tests?",
     "Do you ever help people with homework? If so, who did you help? What kind of homework was it?",
-    "What was a favor you asked someone to do recently? What was a favor someone else asked you to do?  Would you mind spelling your name for me?",
+    "What was a favor you asked someone to do recently? What was a favor someone else asked you to do? Would you mind spelling your name for me?",
     "What do you usually do before you travel?",
     "What do you have to do this week?",
     "What did you have to do last weekend?"
@@ -77,10 +77,20 @@ var units712 = S1units712;
 var unitRange =  units16.concat(units712);
 
 var S1RPunits16 = [
-    ["Greet Student B. Introduce yourself. Ask about Student B’s job. Show interest in B’s response.", "Respond to student A. Answer A’s questions."]
+    ["Greet Student B. Introduce yourself. Ask about Student B’s job. Show interest in B’s response.", "Respond to student A. Answer A’s questions."],
+    ["Ask Student B how he/she gets to school or work. Then ask one or two follow-up questions. Ideas: How long does it take? Do you like getting to school/work this way?", "Answer Student A’s questions."],
+    ["Ask Student B what he/she is doing these days.", "Answer Student A’s question. Add more information. Ideas: Do you like doing them? Why are you doing them?"],
+    ["Invite Student B to do something with you this weekend. Then, listen to Student B, and then respond to the invitation.", "Decline Student A’s invitation and give a reason. Invite Student A to do something another time."],
+    ["Ask Student B about his/her weekend.", "Respond to Student A’s question. Then use expressions to take turns to ask the same questions."],
+    ["Ask Student B where a place is in your city. Then, repeat Student B’s answers to make sure you understood correctly.", "Respond to Student A’s question."],
 ];
 var S1RPunits712 = [
-    ["Tell Student B about someone who taught you a lot. Begin with: \“I learned a lot from...\” Listen and answer Student B’s question.", "Ask Student A for examples."]
+    ["Tell Student B about someone who taught you a lot. Begin with: \“I learned a lot from...\” Then, listen and answer Student B’s question.", "Ask Student A for examples."],
+    ["Ask Student B what he/she wants to have for lunch.", "Listen to Student A’s question and use expressions to show that you are thinking. Then answer Student A’s question."],
+    ["Tell Student B that you have a bad headache.", "Listen to Student B and use expressions to show sympathy. Give advice on Student A’s problem."],
+    ["Tell Student B about an exciting city you visited. Talk about where you went, who you went with, and what you did there.", "Listen to Student A. Use expressions to show interest and surprise. Then change roles."],
+    ["Invite Student B to do something with you tomorrow. Then, listen to Student B’s response and accept the invitation.", "Listen to Student A and decline the invitation politely. Suggest doing the activity on another day instead."],
+    ["Ask Student B if he/she is going to take a vacation this year. Then, listen to Student B’s response and show enthusiasm about his/her vacation plans.", "Tell Student A about your vacation plans. Talk about where you are going to go, when you are going to go, and what you are going to do."]
 ];
 var S2RPunits16 = [
     ["Text A", "Text B"]
