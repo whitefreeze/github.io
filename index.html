@@ -9,31 +9,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container-fluid">
-        <button type="button" class="btn btn-success" id="stretch1" onclick="Stretch1(), myRandomQuestion(unitRange)" disabled>Stretch 1</button>
-        <button type="button" class="btn btn-primary" id="stretch2" onclick="Stretch2(), myRandomQuestion(unitRange)">Stretch 2</button>
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-secondary active">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked> Interview Qs
-            </label>
-            <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option2" autocomplete="off"> Roleplays
-            </label>            
-        </div>    
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-secondary active" onclick="unitsEntire()">
-                <input type="radio" name="options" id="unitAll" autocomplete="off" checked> All units
-            </label>
-            <label class="btn btn-secondary" onclick="unitsLast()">
-                <input type="radio" name="options" id="unit712" autocomplete="off"> Units 7-12
-            </label>            
-        </div>    
-        <button type="button" id="button" class="btn btn-danger" onclick="myRandomQuestion(unitRange)">New Question</button>
-        <button type="button" class="btn btn-light" onclick="plus()">+</button>
-        <button type="button" class="btn btn-light" onclick="minus()">-</button>
+    <div class="container">
+        <div class="col-lg-6">
+            <button type="button" class="btn btn-success" id="stretch1" onclick="Stretch1(), myRandomQuestion(unitRange)">Stretch 1</button>
+            <button type="button" class="btn btn-primary" id="stretch2" onclick="Stretch2(), myRandomQuestion(unitRange)">Stretch 2</button>
+            <button type="button" id="button" class="btn btn-warning btn-lg" onclick="myRandomQuestion(unitRange)">New Question</button>
+        </div>
+        <div class="col-lg-6">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Interview Qs
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> Roleplays
+                </label>            
+            </div>    
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active" onclick="unitsEntire()">
+                    <input type="radio" name="options" id="unitAll" autocomplete="off" checked> All units
+                </label>
+                <label class="btn btn-secondary" onclick="unitsLast()">
+                    <input type="radio" name="options" id="unit712" autocomplete="off"> Units 7-12
+                </label>            
+            </div>    
+        </div>
+        <div class="col" id="updown">
+            <button type="button" class="btn btn-light" onclick="plus()">+</button>
+            <button type="button" class="btn btn-light" onclick="minus()">-</button>
+        </div>
     </div>
-   
-    <h1 id="answer" class="display-2">yoyo</h1>
+   <div class="container">
+       <h1 id="answer" class="display-2 col">yoyo</h1>
+   </div>
    <!-- <div class="container-fluid"> 
         <button type="button" class="btn btn-outline-success">Interview Qs</button>
         <button type="button" class="btn btn-outline-success" disabled>Roleplays</button>

@@ -102,8 +102,12 @@ function myRandomQuestion(questionList) {
     
 // set function that replaces all variables with Stretch 1 or 2 values, respectively
 function Stretch1() {
-    document.querySelector("#stretch1").setAttribute("disabled", "");
-    document.querySelector("#stretch2").removeAttribute("disabled");
+//    document.querySelector("#stretch1").setAttribute("disabled", "");
+//    document.querySelector("#stretch2").removeAttribute("disabled");
+    document.querySelector("#stretch2").classList.replace("btn-primary", "btn-outline-primary")
+    document.querySelector("#stretch1").classList.replace("btn-outline-success", "btn-success")
+    
+    downupGreen();
     
     units16 = S1units16;
     units712 = S1units712;     
@@ -111,9 +115,13 @@ function Stretch1() {
     unitRange = units16.concat(units712);
 }   
 function Stretch2() {
-    document.querySelector("#stretch2").setAttribute("disabled", "");
-    document.querySelector("#stretch1").removeAttribute("disabled");
+    //    document.querySelector("#stretch2").setAttribute("disabled", "");
+    //    document.querySelector("#stretch1").removeAttribute("disabled");
+    document.querySelector("#stretch1").classList.replace("btn-success", "btn-outline-success")
+    document.querySelector("#stretch2").classList.replace("btn-outline-primary", "btn-primary")
     
+    downupBlue();
+
     units16 = S2units16;
     units712 = S2units712;     
     
@@ -170,6 +178,23 @@ function textMinus(name) {
     return "display-" + size;
 }
 
+// add class to plus/minus buttons to change border color to match current level color.
+function downupGreen() {
+    var el = document.querySelector("#updown")
+    
+    for (var i = 0; i < 2; i++) {
+        el.children[i].classList.add("border", "border-success");        
+        el.children[i].classList.remove("border", "border-primary");        
+    }  
+}
+function downupBlue() {
+    var el = document.querySelector("#updown")
+    
+    for (var i = 0; i < 2; i++) {
+        el.children[i].classList.add("border", "border-primary");        
+        el.children[i].classList.remove("border", "border-success");        
+    }  
+}
 
 
   
