@@ -1,3 +1,4 @@
+// arrarys holding the Interview questions
 var S1units16 = [
     "Where do you live?",
     "What are some interesting jobs?",
@@ -77,6 +78,7 @@ var units16 = [];
 var units712 = []; 
 var unitRange =  [];
 
+// arrarys holding the Roleplay questions
 var S1RPunits16 = [
     ["Greet Student B. Introduce yourself. Ask about Student B’s job. Show interest in B’s response.", "Respond to student A. Answer A’s questions."],
     ["Ask Student B how he/she gets to school or work. Then ask one or two follow-up questions. Ideas: How long does it take? Do you like getting to school/work this way?", "Answer Student A’s questions."],
