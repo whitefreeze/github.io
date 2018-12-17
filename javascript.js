@@ -72,9 +72,10 @@ var S2units712 = [
     "What do you have to do this week?",
     "What did you have to do last weekend?"
 ]
-var units16 = S1units16;
-var units712 = S1units712; 
-var unitRange =  units16.concat(units712);
+
+var units16 = [];
+var units712 = []; 
+var unitRange =  [];
 
 var S1RPunits16 = [
     ["Greet Student B. Introduce yourself. Ask about Student B’s job. Show interest in B’s response.", "Respond to student A. Answer A’s questions."],
@@ -93,14 +94,26 @@ var S1RPunits712 = [
     ["Ask Student B if he/she is going to take a vacation this year. Then, listen to Student B’s response and show enthusiasm about his/her vacation plans.", "Tell Student A about your vacation plans. Talk about where you are going to go, when you are going to go, and what you are going to do."]
 ];
 var S2RPunits16 = [
-    ["Text A", "Text B"]
+    ["Tell Student B something you like to do in your free time. Ask if he/she likes to do it, too.", "Answer Student A’s questions with a “no.” Use an expression to soften your opinion."],
+    ["Tell Student B that you want new sneakers, but can’t decide where to buy them. Ask for Student B’s opinion.", "Answer Student A’s questions."],
+    ["Ask Student B what kind of exercise he/she does. Repeat key words to show you’re listening.", "Answer Student A’s question."],
+    ["Imagine you are at a train station. Interrupt Student B, and ask politely for this information: When the next train to New York is. How much the fare is.", "Imagine you are at a train station. Answer Student A’s questions. Use the information: The next train to New York is at 5:35 p.m. The fare is $28."],
+    ["Ask Student B what he/she did last weekend. Listen to Student B’s answer, and show surprise. Then ask more questions about Student B’s weekend.", "Tell Student A that you met a famous person. Answer Student A’s questions."],
+    ["Ask Student B how to make a pizza. Listen to Student B. Use expression to show that you understand.", "Answer Student A’s question."]
 ];
 var S2RPunits712 = [
-    ["Text AA", "Text BB"]
+    ["Call Student B on the phone and find out this information: Where he/she is. What he/she is doing. How the weather is. Ask questions to confirm that you understand.", "Answer Student A’s questions."],
+    ["Ask Student B why he/she didn’t come to your party last night. Listen to Student B and respond.", "Answer Student A’s question. Apologize and give a reason."],
+    ["Ask Student B what classes he/she is taking this semester. Listen to Student B, and talk about one of the classes.", "Answer Student A’s question by saying you are taking music, art, and biology. Listen to Student A and say that you don’t like one of the classes. Use an expression to soften your opinion."],
+    ["Ask Student B about the best way to prepare for a test. Agree with Student B.", "Answer Student A’s question."],
+    ["Ask Student B to do a favor for you. Some ideas: Give you a ride. Lend you some money. Help you with your homework", "Tell Student B that you can’t do the favor. Give a reason why."],
+    ["Ask Student B where he/she is going for his/her next vacation. Then ask follow-up questions.", "Answer Student A’s questions with real or imaginary information."]
+    
 ];
-var RPunits16 = S1RPunits16;
-var RPunits712 = S1RPunits712;
-var RPunitRange = RPunits16.concat(RPunits712);
+
+var RPunits16 = [];
+var RPunits712 = [];
+var RPunitRange = [];
 
 // initial page loaded with an initial question & roleplay
 stretch1();
@@ -108,22 +121,46 @@ myRandomQuestion(unitRange);
 myRandomRoleplay(RPunitRange);
 
 
-function myRandomRoleplay(questionList) {
-    var questionNumber = questionList.length;
-    console.log(questionList.length);
+// set function that replaces all variables with Stretch 1 or 2 values, respectively
+function stretch1() {
+//    document.querySelector("#bs1").setAttribute("disabled", "");
+//    document.querySelector("#stretch2").removeAttribute("disabled");
+document.querySelector("#bs2").classList.replace("btn-primary", "btn-outline-primary")
+document.querySelector("#bs1").classList.replace("btn-outline-success", "btn-success")
 
-    var randomNum = Math.floor(Math.random() * questionNumber);
-    console.log(randomNum);
+// make +/- buttons outlined in Stretch 1 color green
+downupGreen();
 
-    var arr = document.querySelector("#roleplay").children[1].children;
+//  replace Interview Question array with all Stretch 1 content
+units16 = S1units16;
+units712 = S1units712;     
+unitRange = units16.concat(units712);
 
-    // now, loop over the arr, with each index having another array: A & B
-    for(var i = 0; i < questionList.length; i++) {
-        arr[i].innerHTML = questionList[randomNum][i];
-    }
+// replace Roleplay array with all Stretch 1 content
+RPunits16 = S1RPunits16;
+RPunits712 = S1RPunits712;     
+RPunitRange = RPunits16.concat(RPunits712);
 
-    return arr;
-}
+}   
+function stretch2() {
+//    document.querySelector("#stretch2").setAttribute("disabled", "");
+//    document.querySelector("#bs1").removeAttribute("disabled");
+document.querySelector("#bs1").classList.replace("btn-success", "btn-outline-success")
+document.querySelector("#bs2").classList.replace("btn-outline-primary", "btn-primary")
+
+// make +/- buttons outlined in Stretch 2 color blue
+downupBlue();
+
+//  replace Interview Question array with all Stretch 2 content
+units16 = S2units16;
+units712 = S2units712;     
+unitRange = units16.concat(units712);
+
+// replace Roleplay array with all Stretch 2 content
+RPunits16 = S2RPunits16;
+RPunits712 = S2RPunits712;     
+RPunitRange = RPunits16.concat(RPunits712);
+}    
 
 function myRandomQuestion(questionList) {
   // pass an array into the function as an argument. Then you can choose which set of data to be working with. 
@@ -143,47 +180,23 @@ function myRandomQuestion(questionList) {
   console.log(unitRange);
   return (questionList[randomNum]);
 }
-    
-// set function that replaces all variables with Stretch 1 or 2 values, respectively
-function stretch1() {
-    //    document.querySelector("#bs1").setAttribute("disabled", "");
-    //    document.querySelector("#stretch2").removeAttribute("disabled");
-    document.querySelector("#bs2").classList.replace("btn-primary", "btn-outline-primary")
-    document.querySelector("#bs1").classList.replace("btn-outline-success", "btn-success")
-    
-    // make +/- buttons outlined in Stretch 1 color green
-    downupGreen();
-    
-    //  replace Interview Question array with all Stretch 1 content
-    units16 = S1units16;
-    units712 = S1units712;     
-    unitRange = units16.concat(units712);
-    
-    // replace Roleplay array with all Stretch 1 content
-    RPunits16 = S1RPunits16;
-    RPunits712 = S1RPunits712;     
-    RPunitRange = RPunits16.concat(RPunits712);
-    
-}   
-function stretch2() {
-    //    document.querySelector("#stretch2").setAttribute("disabled", "");
-    //    document.querySelector("#bs1").removeAttribute("disabled");
-    document.querySelector("#bs1").classList.replace("btn-success", "btn-outline-success")
-    document.querySelector("#bs2").classList.replace("btn-outline-primary", "btn-primary")
-    
-    // make +/- buttons outlined in Stretch 2 color blue
-    downupBlue();
-    
-    //  replace Interview Question array with all Stretch 2 content
-    units16 = S2units16;
-    units712 = S2units712;     
-    unitRange = units16.concat(units712);
-    
-    // replace Roleplay array with all Stretch 2 content
-    RPunits16 = S2RPunits16;
-    RPunits712 = S2RPunits712;     
-    RPunitRange = RPunits16.concat(RPunits712);
-}    
+
+function myRandomRoleplay(questionList) {
+    var questionNumber = questionList.length;
+    console.log(questionList.length);
+
+    var randomNum = Math.floor(Math.random() * questionNumber);
+    console.log(randomNum);
+
+    var arr = document.querySelector("#roleplay").children[1].children;
+
+    // now, loop over the arr, with each index having another array: A & B
+    for(var i = 0; i < 2; i++) {
+        arr[i].innerHTML = questionList[randomNum][i];
+    }
+
+    return arr;
+}
 
 // change the range of the units by updating the arr to certain units, or all.
 function unitsLast() {
