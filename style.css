@@ -1,13 +1,15 @@
 /* initial hiding of Roleplays when page is loaded */
-/*
+
+
 #roleplay {
     display: none;
 }
-*/
 
+/*
 #answer {
     display: none;
 }
+*/
 
 html {
     font-size: 1rem;
